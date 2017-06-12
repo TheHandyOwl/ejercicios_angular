@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Storage</title>
+</head>
+<body>
+
+    <script>
+
+        // Comprobamos que Web Storage está disponible
+        if ( typeof(Storage) !== "undefined" ) {
+            // Sí soporta Web Storage
+            console.log('Está disponible Web Storage');
+
+            // Escribimos un valor en el almacén local
+            //localStorage.setItem("valorEnLocal", "Hola mundo en local");
+            //sessionStorage.setItem("valorEnSession", "Hola mundo en session");
+
+            //Recuperamos un valor del almacén local
+            //let mensajeLocal = localStorage.getItem("valorEnLocal");
+            let mensajeSession = sessionStorage.getItem("valorEnSession") || "Sin valor";
+
+            //console.log(mensajeLocal);
+            console.log(mensajeSession);
+            
+        } else {
+            // No soporta Web Storage
+            console.log('No está disponible Web Storage');
+        }
+
+    </script>
+    
+</body>
+</html>
