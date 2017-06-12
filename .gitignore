@@ -1,0 +1,10 @@
+# MAC
+.DS_Store
+
+# Archivos de audio y vídeo
+*.mp4
+*.mp3
+
+# Fuentes
+*.ttf
+*.txt
