@@ -6,5 +6,6 @@
 *.mp3
 
 # Fuentes
+*.woff2
 *.ttf
 *.txt
