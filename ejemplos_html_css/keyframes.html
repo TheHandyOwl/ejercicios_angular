@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Animaciones o keyframes</title>
+        <style>
+            /* Usamos la regla keyframes para definir la Animación */
+            @keyframes cajaBailonga {
+                0% {
+                    background-color: deeppink;
+                }
+                50% {
+                    transform: scale(2) rotate(45deg);
+                    background-color: chartreuse;
+                }
+                100% {
+                    transform: scale(1);
+                    background-color: dimgrey;
+                }
+            }
+            .caja {
+                width: 100px;
+                height: 100px;
+                background-color: dimgrey;
+                animation: cajaBailonga 5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="caja"></div>
+    </body>
+</html>
