@@ -35,6 +35,10 @@ export class ContactosService {
     return this._contactos;
   }
 
+  agregarContacto(contacto:string): void {
+    this._contactos.push(contacto);
+  }
+
   eliminarContacto(_contacto: string): void {
     /*
     this.contactos = this.contactos.filter( (contactoAComprobar: string): boolean => {

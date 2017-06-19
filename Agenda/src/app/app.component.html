@@ -1,6 +1,12 @@
 <header>
   <h1>Mi Agenda</h1>
 </header>
+
+<tho-formulario-alta
+  (clickEnGuardar)="guardarContacto($event)"
+>
+</tho-formulario-alta>
+
 <!-- Para enlazar datos en un componente hijo, basta con indicar el atributo que se ha expuesto en éste. -->
 <!-- Si queremos evaluar una expresión previamente a su asignación como valor del atributo, envolvemos con corchetes el atributo -->
 <tho-lista-contactos
