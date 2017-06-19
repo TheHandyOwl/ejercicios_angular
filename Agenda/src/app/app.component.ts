@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ContactosService } from './contactos.service';
+import { Contacto } from './contacto';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { ContactosService } from './contactos.service';
   // Vamos a implementar el hook, pero para ello tenemos que importar el OnInit del core para que funcione
 export class AppComponent implements OnInit {
 
-  contactos: string[];
+  contactos: Contacto[];
 
   // Para hacer una inyección de dependencias necesitamos sí o sí hacerlo en el constructor de una clase. Tenemos que indicar un parámetro con un modificador de acceso (obligatorio). Además, tenemos que anotar su tipo, que no es otro que el servicio a inyectar.
   constructor(private _contactosService: ContactosService) {
@@ -36,7 +37,7 @@ export class AppComponent implements OnInit {
     this.contactos = this._contactosService.obtenerContactos();
   }
 
-  guardarContacto(contacto: string): void {
+  guardarContacto(contacto: Contacto): void {
     this._contactosService.agregarContacto(contacto);
     this.contactos = this._contactosService.obtenerContactos();
   }

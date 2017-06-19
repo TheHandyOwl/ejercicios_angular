@@ -1,0 +1,13 @@
+/* Con las clases '' */
+input.ng-touched.ng-invalid {
+    border: 2px solid red;
+}
+
+/* Con las clases '' */
+input.ng-touched.ng-valid {
+    border: 2px solid green;
+}
+
+.mensaje-error{
+    color: red;
+}

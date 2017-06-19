@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+import { Contacto } from '../contacto';
+
 @Component({
   selector: 'tho-lista-contactos',
   templateUrl: './lista-contactos.component.html',
@@ -13,10 +15,10 @@ export class ListaContactosComponent implements OnInit {
 
   // Al querer notificar vemos que no hay EventEmitter
   // Con el decorador 'Output' exponemos eventos a otros componentes. Es necesario, además, que el atributo decorado sea de tipo EventEmitter<T>
-  @Output() clickEnEliminar = new EventEmitter<string>();
+  @Output() clickEnEliminar = new EventEmitter<Contacto>();
 
   // Para emitir datos usamos la función 'emit' del 'EventEmitter'
-  notificarEliminacion(contactoParaBorrar: string): void {
+  notificarEliminacion(contactoParaBorrar: Contacto): void {
     // Notificamos al padre pero no tenemos EventEmitter
     // Tras crear e importar vamos al tema
     this.clickEnEliminar.emit(contactoParaBorrar);
@@ -32,7 +34,7 @@ export class ListaContactosComponent implements OnInit {
     return contacto.indexOf('Cook') > -1 || contacto.indexOf('Musk') > -1 ? '32px' : '14px';
   }
   */
-  
+
   constructor() { }
 
   ngOnInit() {
