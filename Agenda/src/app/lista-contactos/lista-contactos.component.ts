@@ -22,14 +22,17 @@ export class ListaContactosComponent implements OnInit {
     this.clickEnEliminar.emit(contactoParaBorrar);
   }
 
-  esGatesWozniak(contacto: string): boolean {
+  /* Quitamos estilos por el momento, lo dejaré para trastear como 'favoritos' */
+  /*
+    esGatesWozniak(contacto: string): boolean {
     return contacto.indexOf('Gates') > -1 || contacto.indexOf('Wozniak') > -1;
   }
 
   esCookMusk(contacto: string): string {
     return contacto.indexOf('Cook') > -1 || contacto.indexOf('Musk') > -1 ? '32px' : '14px';
   }
-
+  */
+  
   constructor() { }
 
   ngOnInit() {
