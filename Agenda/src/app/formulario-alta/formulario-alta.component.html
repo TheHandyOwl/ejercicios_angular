@@ -3,79 +3,118 @@
 -->
 <form ngForm #formularioContacto="ngForm" (ngSubmit)="notificarContacto(formularioContacto)">
 
-<!--
-  Para tranajar con elementos de formulario necesitamos hacer uso de la directiva 'NgModel'. Para obteer la referencia a la instancia 'FormControl' del elemento, usamos una template referecnce variable, a la cual asignamos como valor la propia directiva 'NgModel'.
- -->
+  <!--
+    Para tranajar con elementos de formulario necesitamos hacer uso de la directiva 'NgModel'. Para obteer la referencia a la instancia 'FormControl' del elemento, usamos una template referecnce variable, a la cual asignamos como valor la propia directiva 'NgModel'.
+  -->
 
-<!-- Nombre del contacto -->
-<label for="inputNombre">Nombre</label>
-<input
-  id="inputNombre"
-  placeholder="Ej. Tim"
-  type="text"
-  ngModel
-  name="nombre"
-  #nombreRef="ngModel"
-  required
->
-<!--
-  Con la directiva ngIf escribimos o no un elemento en el DOM, es decir, lo renderizamos  o no en el navegador en función de si la expresión indicada como valor resuelve como true o como false
--->
-<div *ngIf="nombreRef.touched && nombreRef.invalid" class="mensaje-error">
-  El nombre es un dato obligatorio.
-</div>
+  <!-- Nombre del contacto -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="inputNombre">Nombre</label>
+      <input
+        class="u-full-width"
+        id="inputNombre"
+        placeholder="Ej. Tim"
+        type="text"
+        ngModel
+        name="nombre"
+        #nombreRef="ngModel"
+        required
+      >
+      <!--
+        Con la directiva ngIf escribimos o no un elemento en el DOM, es decir, lo renderizamos  o no en el navegador en función de si la expresión indicada como valor resuelve como true o como false
+      -->
+      <div *ngIf="nombreRef.touched && nombreRef.invalid" class="mensaje-error">
+        El nombre es un dato obligatorio.
+      </div>
+    </div>
+  </div>
 
-<!-- Apellidos del contacto -->
-<label for="inputApellidos">Apellidos</label>
-<input
-  id="inputApellidos"
-  placeholder="Ej. Cook"
-  type="text"
-  ngModel
-  name="apellidos"
->
 
-<!-- Móvil del contacto -->
-<label for="inputmovil">Móvil</label>
-<input
-  id="inputmovil"
-  placeholder="Ej. 666123456"
-  type="tel"
-  ngModel
-  name="movil"
->
+  <!-- Apellidos del contacto -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="inputApellidos">Apellidos</label>
+      <input
+        class="u-full-width"
+        id="inputApellidos"
+        placeholder="Ej. Cook"
+        type="text"
+        ngModel
+        name="apellidos"
+      >
+    </div>
+  </div>
 
-<!-- Correo electrónico del contacto -->
-<label for="inputEmail">Email</label>
-<input
-  id="inputEmail"
-  placeholder="Ej. tim.cook@apple.com"
-  type="email"
-  ngModel
-  name="email"
->
+  <!-- Móvil del contacto -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="inputmovil">Móvil</label>
+      <input
+        class="u-full-width"
+        id="inputmovil"
+        placeholder="Ej. 666123456"
+        type="tel"
+        ngModel
+        name="movil"
+      >
+    </div>
+  </div>
 
-<!-- Cuenta de Facebook del contacto -->
-<label for="inputFacebook">Facebook</label>
-<input
-  id="inpuNombre"
-  placeholder="Ej. tim.cook"
-  type="text"
-  ngModel
-  name="inputFacebook"
->
+  <!-- Correo electrónico del contacto -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="inputEmail">Email</label>
+      <input
+        class="u-full-width"
+        id="inputEmail"
+        placeholder="Ej. tim.cook@apple.com"
+        type="email"
+        ngModel
+        name="email"
+      >
+    </div>
+  </div>
 
-<!-- Twitter del contacto -->
-<label for="inputTwitter">Twitter</label>
-<input
-  id="inpuNombre"
-  placeholder="Ej. timcook"
-  type="text"
-  ngModel
-  name="inputTwitter"
->
+  <!-- Cuenta de Facebook del contacto -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="inputFacebook">Facebook</label>
+      <input
+        class="u-full-width"
+        id="inpuNombre"
+        placeholder="Ej. tim.cook"
+        type="text"
+        ngModel
+        name="inputFacebook"
+      >
+    </div>
+  </div>
 
-<!-- -->
-<button type="submit" [disabled]="formularioContacto.invalid">Guardar contacto</button>
+  <!-- Twitter del contacto -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="inputTwitter">Twitter</label>
+      <input
+        class="u-full-width"
+        id="inpuNombre"
+        placeholder="Ej. timcook"
+        type="text"
+        ngModel
+        name="inputTwitter"
+      >
+    </div>
+  </div>
+
+  <!-- Botón guardar -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <button
+        class="button-primary u-full-width"
+        type="submit" [disabled]="formularioContacto.invalid">
+        Guardar contacto
+      </button>
+    </div>
+  </div>
 
 </form>

@@ -1,0 +1,16 @@
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 0; /* espacio entre la caja y otro elemento */
+    padding: 6px 14px; /* espacio entre la caja y el texto de dicho elemento: vertical / horizontal */
+}
+
+/* li sólo cuando estamos con el ratón encima */
+li:hover {
+    background-color: #f0f0f0;
+    /* cambiamos el cursor por una manita */
+    /* damos la sensación de que se puede hacer algo con él*/
+    cursor: pointer;
+}
