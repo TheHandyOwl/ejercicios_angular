@@ -20,7 +20,7 @@ export class FormularioAltaComponent implements OnInit {
     // Este log son cadenas tal cual, pero mejor tunearlo a contacto
     //console.log(formulario.value);
     //this.clickEnGuardar.emit(formulario.value.nombre);
-
+    /*
     let contacto = new Contacto(
         formulario.value.nombre,
         formulario.value.apellidos,
@@ -29,7 +29,10 @@ export class FormularioAltaComponent implements OnInit {
         formulario.value.facebook,
         formulario.value.twitter
       );
-    console.log('Formulario alta - Notificación: ', contacto);
+    */
+    //console.log('Formulario: ', formulario.value);
+    let contacto = Contacto.nuevoDesdeJson(formulario.value);
+    //console.log('Formulario alta - Notificación: ', contacto);
     this.clickEnGuardar.emit(contacto);
 
     // Otras validaciones del formulario, como limpiar si corresponde

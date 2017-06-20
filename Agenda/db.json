@@ -1,3 +1,31 @@
 {
-    "contactos": []
+  "contactos": [
+    {
+      "nombre": "Tom",
+      "apellidos": "Cook",
+      "movil": "555 666 777",
+      "email": "tim.cook@apple.com",
+      "facebook": "tim.cook",
+      "twitter": "@timcook",
+      "id": 1
+    },
+    {
+      "nombre": "Bill",
+      "apellidos": "Gates",
+      "movil": "777 888 999",
+      "email": "bill.gates@microsoft.com",
+      "facebook": "bill.gates",
+      "twitter": "@billgates",
+      "id": 2
+    },
+    {
+      "nombre": "Elon",
+      "apellidos": "Musk",
+      "movil": "555 666 777",
+      "email": "elon.musk@tesla.com",
+      "facebook": "elon.musk",
+      "twitter": "@elonmusk",
+      "id": 3
+    }
+  ]
 }

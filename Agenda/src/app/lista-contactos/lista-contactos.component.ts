@@ -23,6 +23,10 @@ export class ListaContactosComponent implements OnInit {
     // Tras crear e importar vamos al tema
     this.clickEnEliminar.emit(contactoParaBorrar);
   }
+  
+  obtenerNombreCompleto(dato: Contacto): string {
+    return `${dato.nombre} ${dato.apellidos}`;
+  }
 
   /* Quitamos estilos por el momento, lo dejaré para trastear como 'favoritos' */
   /*

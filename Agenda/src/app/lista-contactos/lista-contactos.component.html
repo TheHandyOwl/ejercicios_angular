@@ -1,7 +1,7 @@
 <ul>
   <!-- Con la directiva 'NgFor' iteramos sobre una colección. en cada iteración se referencia la variable indicada en el elemento iterado. Además, esta directiva replica el elemento HTML sobre el cual lo usa -->
   <li *ngFor="let contacto of datos">
-    {{ contacto.nombre }}
+    {{ obtenerNombreCompleto(contacto) }}
     <!-- Para hacer suscripciones a eventos envolvemos con paréntesis el nombre del mismo. Tenemos que asociar, además, un manejador. -->
     <!-- Si queremos acceder a los datos de un evento tenemos que pasar como parámetro al manejador el objeto '$event'. -->
     <!--
