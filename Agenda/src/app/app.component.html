@@ -12,8 +12,8 @@
 <!-- Para enlazar datos en un componente hijo, basta con indicar el atributo que se ha expuesto en éste. -->
 <!-- Si queremos evaluar una expresión previamente a su asignación como valor del atributo, envolvemos con corchetes el atributo -->
 <tho-lista-contactos
-  [datos]="contactos"
+  [datos]="contactos | async"
   (clickEnEliminar)="eliminarContacto($event)"
   ></tho-lista-contactos>
-  
+
 </div>
