@@ -4,6 +4,25 @@
   <h1>Mi Agenda</h1>
 </header>
 
+<!-- Barra de navegación -->
+<nav>
+  <ul>
+    <li>
+      <!-- No usar href si queremos que lo gestione Angular -->
+      <!--
+      <a href=""></a>
+      -->
+      <a routerLink="/mis-contactos">Mis contactos</a>
+    </li>
+    <li>
+      <a routerLink="/nuevo-contacto">Nuevo contacto</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Zona dinámica para cargar las distintas secciones -->
+<router-outlet></router-outlet>
+
 <tho-formulario-alta
   (clickEnGuardar)="guardarContacto($event)"
 >
