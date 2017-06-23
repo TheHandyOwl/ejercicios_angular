@@ -11,8 +11,7 @@ export class Contacto {
     ) {}
 
     // Función a nivel de clase y no a nivel de instancia
-    // Creamos una nueva instancia de tipo 'Contacto' a
-    // partir de un objeto JSON.
+    // Creamos una nueva instancia de tipo 'Contacto' a partir de un objeto JSON.
     static nuevoDesdeJson(json: any): Contacto {
         return new Contacto(
             json.id,
@@ -25,8 +24,7 @@ export class Contacto {
         );
     }
 
-    // Creamos un nuev array de instancias de tipo 'Contacto'
-    // a partir de un array de objetos JSON.
+    // Creamos un nuevo array de instancias de tipo 'Contacto' a partir de un array de objetos JSON.
     static nuevaColeccionDesdeJson(json: any[]): Contacto[] {
         return json.map((contactoJson:any): Contacto => {
             return Contacto.nuevoDesdeJson(contactoJson);

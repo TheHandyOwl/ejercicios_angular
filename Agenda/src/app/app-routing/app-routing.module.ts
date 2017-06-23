@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: '**', // ** Cualquier cosa. PONER AL FINAL PORQUE EL ORDEN IMPORTA!!!
-    pathMatch: 'full', // Cómo se comporta la ruta: que matchee hasta la ruta, hasta las opciones, todo
+    pathMatch: 'full', // Cómo se comporta la ruta: que matchee hasta la ruta, hasta las opciones. Todo
     redirectTo: '/mis-contactos'
   }
 ];

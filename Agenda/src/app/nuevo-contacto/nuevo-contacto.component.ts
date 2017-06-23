@@ -20,12 +20,13 @@ export class NuevoContactoComponent {
 
   guardarContacto(contacto: Contacto): void {
   this._contactosService
-      .agregarContacto(contacto)
+      .agregarContacto(contacto) // Devuelve un observable!!!
       // Cambiamos esta parte
       /*
       // Tenemos que suscribirnos
+      // Si no nos suscribimos no se invoca!!!
       .subscribe(() => {
-        this.contactos$ = this._contactosService.obtenerContactos(); // Podríamos pasar un contacto pero lo pasamos vacío
+        this.contactos$ = this._contactosService.obtenerContactos(); // Podríamos pasar un contacto pero lo pasamos vacío si queremos hacer algo con el contacto, pero no es el caso. Tan sólo actualizamos lista cuando finaliza
       }) // Si no hacemos esto no se invoca. Aquí no hay pipe
       */
       //.subscribe(); // Invoca un observable, y se ejecuta tras la operación asíncrona que estaba ejecutando

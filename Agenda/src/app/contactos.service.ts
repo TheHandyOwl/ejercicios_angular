@@ -39,7 +39,7 @@ export class ContactosService {
     // hacer esta operación nos apoyamos en la función 'map', que es un operador de los objetos
     // 'Observables'. Este operador transforma un 'Observable' en otro.
     // Un observable de response se transforma en un observable de contactos
-    // Ahora tenemos un observable que tendremos que importar e instanciar
+    // OJO: Tenemos un observable que tendremos que importar e instanciar
     return this._http
                 //.get('http://localhost:3004/contactos')
                 .get(`${environment.apiUri}/contactos`)
@@ -74,7 +74,7 @@ export class ContactosService {
                });
   }
 
-  eliminarContacto(_contacto: string): void {
+  eliminarContacto(contacto: string): void {
     /*
     this.contactos = this.contactos.filter( (contactoAComprobar: string): boolean => {
       return contactoAComprobar !== contacto;
