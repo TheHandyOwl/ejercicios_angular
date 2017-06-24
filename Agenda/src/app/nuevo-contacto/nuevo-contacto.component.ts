@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ContactosService } from '../contactos.service';
 import { Contacto } from '../contacto';
+import { ContactosService } from '../contactos.service';
 
 @Component({
   selector: 'app-nuevo-contacto',
@@ -11,13 +11,16 @@ import { Contacto } from '../contacto';
 })
 export class NuevoContactoComponent {
 
+  //2. Inyección de dependencias
   //constructor() { }
-  // Inyección de dependencias para que no se queje contantos
+  // Inyección de dependencias para que no se queje contactos
   constructor(
     private _contactosService: ContactosService,
+    // Inyección de rutas
     private _router: Router
   ) { }
 
+  // 1. Traemos el manejador
   guardarContacto(contacto: Contacto): void {
   this._contactosService
       .agregarContacto(contacto) // Devuelve un observable!!!

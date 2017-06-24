@@ -12,12 +12,12 @@ import { Contacto } from '../contacto';
 export class MisContactosComponent implements OnInit {
 
   //contactos: Observable<Contacto[]>;
-  //Como es un observable se one un $
-  //1.
+  //Como es un observable se pone un $
+  //1. Traemos la variable que contendrá los contactos
   contactos$: Observable<Contacto[]>;
 
+  //2. Traemos el constructor
   //constructor() { }
-  //2.
 
   // Para hacer una inyección de dependencias necesitamos sí o sí hacerlo en el constructor de una clase. Tenemos que indicar un parámetro con un modificador de acceso (obligatorio). Además, tenemos que anotar su tipo, que no es otro que el servicio a inyectar.
   constructor(private _contactosService: ContactosService) {
@@ -26,9 +26,9 @@ export class MisContactosComponent implements OnInit {
     //console.log('Porque no puedes trabajar con el template si no está cargado');
   }
 
+  //3. Inicializamos los contactos a través del servicio en el hook OnInit
   //ngOnInit() { }
-  //3
-    // Como se sigue quejando vamos a ver qué falta para que se calle
+  
   // En el hook 'OnInit' inicializamos los datos del componente.
   ngOnInit() {
     // Mejor aquí que en el constructor
@@ -37,8 +37,8 @@ export class MisContactosComponent implements OnInit {
     //this.contactos$ = this._contactosService.obtenerContactos();
     this.contactos$ = this._contactosService
       .obtenerContactos()
-      // El pipe | ayns haría ésto,
-      // pero no hemos llagado a picar esta parte porque no hace falta.
+      // El pipe | async haría ésto,
+      // pero no hemos llegado a picar esta parte porque no hace falta.
       /*
       .subscribe((contactos: Contacto[]) => {
         this.contactos= contactos;
@@ -47,8 +47,9 @@ export class MisContactosComponent implements OnInit {
       ;
   }
 
-  // Por tienoi eliminamos el botónd e eliminar
-  // DEL HTML 
+  // 4. Por tiempo nos saltamos esta parte
+  // Por tiempo eliminamos el botón de eliminar
+  // Y DEL HTML 
   //  (clickEnEliminar)="eliminarContacto($event)"
 
   /*
@@ -56,6 +57,6 @@ export class MisContactosComponent implements OnInit {
     this._contactosService.eliminarContacto(contacto);
     this.contactos$ = this._contactosService.obtenerContactos();
   }
-*/
+  */
 
 }

@@ -76,7 +76,7 @@ export class ContactosService {
 
   eliminarContacto(contacto: string): void {
     /*
-    this.contactos = this.contactos.filter( (contactoAComprobar: string): boolean => {
+    this._contactos = this._contactos.filter( (contactoAComprobar: string): boolean => {
       return contactoAComprobar !== contacto;
     });
     */

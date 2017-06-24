@@ -24,5 +24,9 @@ a {
 }
 
 a.seleccionada {
+    /*
     border-bottom: 1px solid white;
+    */
+    color: white;
+    background-color: #1EAEDB;
 }
