@@ -19,7 +19,7 @@ export class OrdenContactosPipe implements PipeTransform {
     if (contactos){
 
       // La ordenamos indicando una función de ordenación
-      return contactos.sort((contactoA: Contacto, contactoB: Contacto): number => {
+      ordenados = contactos.sort((contactoA: Contacto, contactoB: Contacto): number => {
 
         let resultado: number;
 
@@ -48,6 +48,8 @@ export class OrdenContactosPipe implements PipeTransform {
     else {
       ordenados = [];
     }
+
+    // Este devuelve siempre, tanto si hay contactos como si no los hay
     return ordenados;
     
   }

@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 
+# db
+db.json
+
 # dependencies
 /node_modules
 

@@ -32,8 +32,8 @@ export class MisContactosComponent implements OnInit {
   // En el hook 'OnInit' inicializamos los datos del componente.
   ngOnInit() {
     // Mejor aquí que en el constructor
-    console.log('Estoy vivo!');
-    //Tras meterlo en el costructor
+    //console.log('Estoy vivo!');
+    // Tras meterlo en el costructor
     //this.contactos$ = this._contactosService.obtenerContactos();
     this.contactos$ = this._contactosService
       .obtenerContactos()
